@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Accueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BorneListeCollections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BorneListePhotos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BorneMedia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FiltresLieux.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FiltresMedias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GererCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GererDomaineValeurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GererLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GererMedia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ListeLieux.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ListeMedias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BorneParametres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SelectionEvenement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SelectionLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SelectionMedia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SelectionPersonne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SelectionSujet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TestPhotos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SM4D-2", "SM4D-2\SM4D-2.csproj", "{84361112-9055-4231-B444-20CAD3318EE7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SM4D2Librairie", "SM4D2Librairie\SM4D2Librairie.csproj", "{DE676282-4CEB-4D63-8CFF-982D3608B694}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84361112-9055-4231-B444-20CAD3318EE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84361112-9055-4231-B444-20CAD3318EE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84361112-9055-4231-B444-20CAD3318EE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84361112-9055-4231-B444-20CAD3318EE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE676282-4CEB-4D63-8CFF-982D3608B694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE676282-4CEB-4D63-8CFF-982D3608B694}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE676282-4CEB-4D63-8CFF-982D3608B694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE676282-4CEB-4D63-8CFF-982D3608B694}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A20BB313-DE5E-4E46-867A-A977407F06FC}
+	EndGlobalSection
+EndGlobal
