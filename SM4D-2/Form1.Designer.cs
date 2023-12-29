@@ -161,9 +161,10 @@
             labelInstructions.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             labelInstructions.Location = new Point(309, 251);
             labelInstructions.Name = "labelInstructions";
-            labelInstructions.Size = new Size(218, 21);
+            labelInstructions.Size = new Size(310, 21);
             labelInstructions.TabIndex = 0;
-            labelInstructions.Text = "Cliquez sur la fonction désirée";
+            labelInstructions.Text = "Pour Samuel Cliquez sur la fonction désirée";
+            labelInstructions.Click += labelInstructions_Click;
             // 
             // panel1
             // 

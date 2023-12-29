@@ -129,7 +129,7 @@ namespace SM4D_2
             switch (ecran)
             {
                 case "BLP":
-                    formBLP.Show();             
+                    formBLP.Show();
                     break;
                 case "BP":
                     formBP.initialiserContexte();
@@ -249,6 +249,11 @@ namespace SM4D_2
         private void buttonCollections_Click(object sender, EventArgs e)
         {
             basculer("BLC");
+        }
+
+        private void labelInstructions_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
