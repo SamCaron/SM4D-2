@@ -34,3 +34,4 @@ C:\Users\Utilisateur\Documents\GitHub\SM4D-2\SM4D2Librairie\obj\Debug\net6.0\SM4
 C:\Users\Utilisateur\Documents\GitHub\SM4D-2\SM4D2Librairie\obj\Debug\net6.0\refint\SM4D2Librairie.dll
 C:\Users\Utilisateur\Documents\GitHub\SM4D-2\SM4D2Librairie\obj\Debug\net6.0\SM4D2Librairie.pdb
 C:\Users\Utilisateur\Documents\GitHub\SM4D-2\SM4D2Librairie\obj\Debug\net6.0\ref\SM4D2Librairie.dll
+C:\Users\Proprio\source\repos\SM4D-2\SM4D2Librairie\obj\Debug\net6.0\SM4D2Librairie.sourcelink.json
