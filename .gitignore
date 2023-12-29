@@ -8,7 +8,7 @@
 # wget --no-check-certificate http://gist.githubusercontent.com/kmorcinek/2710267/raw/.gitignore
 
 # Fichier de configuration pour la connexion string
-/SM4D-2/App.config
+
 
 # User-specific files
 *.suo
@@ -227,3 +227,4 @@ AppPackages/
 #####
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
 #####
+SM4D-2/App.config
