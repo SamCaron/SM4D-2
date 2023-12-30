@@ -25,6 +25,8 @@ namespace SM4D_2
         BorneMedia formBP;
         BorneParametres formParm;
         BorneListeCollections formColl;
+        FenetreConnexion formConn;
+
 
 
         public AccueilBorne()
@@ -43,6 +45,7 @@ namespace SM4D_2
             formBP = new BorneMedia();
             formParm = new BorneParametres();
             formColl = new BorneListeCollections();
+            formConn = new FenetreConnexion();
 
             // boutons d'accès aux écrans du niveau 1 (bandeau de gauche)
             buttonMedias.Enabled = true;
@@ -75,6 +78,14 @@ namespace SM4D_2
             formColl.FormBorderStyle = FormBorderStyle.None;
             this.panelCentreNiveau1.Controls.Add(formColl);
 
+            // Instanciation de l'écran de connexion
+            formConn.TopLevel = false;
+            formConn.AutoScroll = true;
+            formConn.FormBorderStyle = FormBorderStyle.None;
+            
+            this.panelCentreNiveau1.Controls.Add(formConn);
+
+
             RafraichirFormulaire();
             enInitialisation = false;
         }
@@ -83,7 +94,7 @@ namespace SM4D_2
         private void RafraichirFormulaire()
         {
 
-
+            this.lblUtilisateur.Text = formConn.prenom;
         }
         /*   private void linkLabelCacher_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
            {
@@ -126,6 +137,7 @@ namespace SM4D_2
             formBP.Hide();
             formParm.Hide();
             formColl.Hide();
+            formConn.Hide();
             switch (ecran)
             {
                 case "BLP":
@@ -142,6 +154,9 @@ namespace SM4D_2
                 case "Parm":
                     formParm.initialiserContexte();
                     formParm.Show();
+                    break;
+                case "Login":
+                    formConn.Show();
 
 
                     ConnecteurSQLCommun connecteur = new ConnecteurSQLCommun();
@@ -153,7 +168,7 @@ namespace SM4D_2
 
             }
 
-
+            RafraichirFormulaire();
         }
         public void BPContexte(Medias medium, List<int> listeIds)
         {
@@ -254,6 +269,11 @@ namespace SM4D_2
         private void labelInstructions_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonConnexion_Click(object sender, EventArgs e)
+        {
+            basculer("Login");
         }
     }
 }

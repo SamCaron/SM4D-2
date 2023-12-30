@@ -176,3 +176,4 @@ C:\Users\Utilisateur\Documents\GitHub\SM4D-2\SM4D-2\obj\Debug\net6.0-windows\SM4
 C:\Users\Utilisateur\Documents\GitHub\SM4D-2\SM4D-2\obj\Debug\net6.0-windows\SM4D-2.genruntimeconfig.cache
 C:\Users\Utilisateur\Documents\GitHub\SM4D-2\SM4D-2\obj\Debug\net6.0-windows\ref\SM4D-2.dll
 C:\Users\Proprio\source\repos\SM4D-2\SM4D-2\obj\Debug\net6.0-windows\SM4D-2.sourcelink.json
+C:\Users\Proprio\source\repos\SM4D-2\SM4D-2\obj\Debug\net6.0-windows\SM4D_2.FenetreConnexion.resources

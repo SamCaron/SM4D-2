@@ -45,6 +45,8 @@
             button2 = new Button();
             button3 = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
+            buttonConnexion = new Button();
+            lblUtilisateur = new Label();
             panelRubanGauche.SuspendLayout();
             panelCentreNiveau1.SuspendLayout();
             panel1.SuspendLayout();
@@ -61,8 +63,9 @@
             panelRubanGauche.Controls.Add(labelMedias);
             panelRubanGauche.Controls.Add(buttonMedias);
             panelRubanGauche.Location = new Point(2, 1);
+            panelRubanGauche.Margin = new Padding(3, 4, 3, 4);
             panelRubanGauche.Name = "panelRubanGauche";
-            panelRubanGauche.Size = new Size(114, 759);
+            panelRubanGauche.Size = new Size(130, 1012);
             panelRubanGauche.TabIndex = 1;
             panelRubanGauche.Paint += panelRubanGauche_Paint;
             // 
@@ -70,18 +73,19 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(30, 641);
+            label1.Location = new Point(34, 855);
             label1.Name = "label1";
-            label1.Size = new Size(48, 15);
+            label1.Size = new Size(59, 20);
             label1.TabIndex = 47;
             label1.Text = "Quitter";
             // 
             // button4
             // 
             button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(4, 536);
+            button4.Location = new Point(5, 715);
+            button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
-            button4.Size = new Size(106, 102);
+            button4.Size = new Size(121, 136);
             button4.TabIndex = 46;
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
@@ -90,18 +94,19 @@
             // 
             labelReglages.AutoSize = true;
             labelReglages.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelReglages.Location = new Point(29, 518);
+            labelReglages.Location = new Point(33, 691);
             labelReglages.Name = "labelReglages";
-            labelReglages.Size = new Size(57, 15);
+            labelReglages.Size = new Size(72, 20);
             labelReglages.TabIndex = 45;
             labelReglages.Text = "Réglages";
             // 
             // buttonReglages
             // 
             buttonReglages.Image = (Image)resources.GetObject("buttonReglages.Image");
-            buttonReglages.Location = new Point(4, 413);
+            buttonReglages.Location = new Point(5, 551);
+            buttonReglages.Margin = new Padding(3, 4, 3, 4);
             buttonReglages.Name = "buttonReglages";
-            buttonReglages.Size = new Size(106, 102);
+            buttonReglages.Size = new Size(121, 136);
             buttonReglages.TabIndex = 42;
             buttonReglages.UseVisualStyleBackColor = true;
             buttonReglages.Click += buttonReglages_Click;
@@ -110,18 +115,19 @@
             // 
             labelLieux.AutoSize = true;
             labelLieux.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelLieux.Location = new Point(29, 98);
+            labelLieux.Location = new Point(33, 131);
             labelLieux.Name = "labelLieux";
-            labelLieux.Size = new Size(67, 15);
+            labelLieux.Size = new Size(85, 20);
             labelLieux.TabIndex = 40;
             labelLieux.Text = "Collections";
             // 
             // buttonCollections
             // 
             buttonCollections.Image = (Image)resources.GetObject("buttonCollections.Image");
-            buttonCollections.Location = new Point(4, 7);
+            buttonCollections.Location = new Point(5, 9);
+            buttonCollections.Margin = new Padding(3, 4, 3, 4);
             buttonCollections.Name = "buttonCollections";
-            buttonCollections.Size = new Size(106, 88);
+            buttonCollections.Size = new Size(121, 117);
             buttonCollections.TabIndex = 39;
             buttonCollections.UseVisualStyleBackColor = true;
             buttonCollections.Click += buttonCollections_Click;
@@ -130,9 +136,9 @@
             // 
             labelMedias.AutoSize = true;
             labelMedias.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelMedias.Location = new Point(30, 227);
+            labelMedias.Location = new Point(34, 303);
             labelMedias.Name = "labelMedias";
-            labelMedias.Size = new Size(45, 15);
+            labelMedias.Size = new Size(58, 20);
             labelMedias.TabIndex = 36;
             labelMedias.Text = "Photos";
             // 
@@ -140,9 +146,10 @@
             // 
             buttonMedias.AccessibleDescription = "Photos";
             buttonMedias.Image = (Image)resources.GetObject("buttonMedias.Image");
-            buttonMedias.Location = new Point(5, 122);
+            buttonMedias.Location = new Point(6, 163);
+            buttonMedias.Margin = new Padding(3, 4, 3, 4);
             buttonMedias.Name = "buttonMedias";
-            buttonMedias.Size = new Size(105, 102);
+            buttonMedias.Size = new Size(120, 136);
             buttonMedias.TabIndex = 1;
             buttonMedias.UseVisualStyleBackColor = true;
             buttonMedias.Click += buttonMedias_Click;
@@ -150,20 +157,21 @@
             // panelCentreNiveau1
             // 
             panelCentreNiveau1.Controls.Add(labelInstructions);
-            panelCentreNiveau1.Location = new Point(116, 2);
+            panelCentreNiveau1.Location = new Point(167, 46);
+            panelCentreNiveau1.Margin = new Padding(3, 4, 3, 4);
             panelCentreNiveau1.Name = "panelCentreNiveau1";
-            panelCentreNiveau1.Size = new Size(914, 758);
+            panelCentreNiveau1.Size = new Size(1011, 968);
             panelCentreNiveau1.TabIndex = 2;
             // 
             // labelInstructions
             // 
             labelInstructions.AutoSize = true;
             labelInstructions.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelInstructions.Location = new Point(309, 251);
+            labelInstructions.Location = new Point(198, 14);
             labelInstructions.Name = "labelInstructions";
-            labelInstructions.Size = new Size(310, 21);
+            labelInstructions.Size = new Size(642, 28);
             labelInstructions.TabIndex = 0;
-            labelInstructions.Text = "Pour Samuel Cliquez sur la fonction désirée";
+            labelInstructions.Text = "Bienvenue! N'oubliez pas de vous connecter pour commenter les photos";
             labelInstructions.Click += labelInstructions_Click;
             // 
             // panel1
@@ -217,14 +225,37 @@
             tableLayoutPanel1.Size = new Size(200, 100);
             tableLayoutPanel1.TabIndex = 0;
             // 
+            // buttonConnexion
+            // 
+            buttonConnexion.Location = new Point(1027, 12);
+            buttonConnexion.Name = "buttonConnexion";
+            buttonConnexion.Size = new Size(151, 29);
+            buttonConnexion.TabIndex = 3;
+            buttonConnexion.Text = "S'identifier";
+            buttonConnexion.UseVisualStyleBackColor = true;
+            buttonConnexion.Click += buttonConnexion_Click;
+            // 
+            // lblUtilisateur
+            // 
+            lblUtilisateur.AutoSize = true;
+            lblUtilisateur.Enabled = false;
+            lblUtilisateur.Location = new Point(945, 16);
+            lblUtilisateur.Name = "lblUtilisateur";
+            lblUtilisateur.Size = new Size(76, 20);
+            lblUtilisateur.TabIndex = 1;
+            lblUtilisateur.Text = "Utilisateur";
+            // 
             // AccueilBorne
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1128, 861);
+            ClientSize = new Size(1289, 1055);
+            Controls.Add(lblUtilisateur);
+            Controls.Add(buttonConnexion);
             Controls.Add(panelCentreNiveau1);
             Controls.Add(panelRubanGauche);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             Name = "AccueilBorne";
             Text = "Archives St-Marcel";
             panelRubanGauche.ResumeLayout(false);
@@ -233,6 +264,7 @@
             panelCentreNiveau1.PerformLayout();
             panel1.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -252,5 +284,7 @@
         private Button button4;
         private Label label1;
         private Label labelInstructions;
+        private Button buttonConnexion;
+        private Label lblUtilisateur;
     }
 }
