@@ -230,3 +230,11 @@ AppPackages/
 SM4D-2/App.config
 *.v2
 *.bin
+*.dll
+*.exe
+*.pdb
+*.exe
+*.resources
+*.json
+*.txt~
+*.cache
