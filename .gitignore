@@ -238,3 +238,5 @@ SM4D-2/App.config
 *.json
 *.txt~
 *.cache
+*.props
+*.editorconfig
