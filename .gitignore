@@ -240,3 +240,5 @@ SM4D-2/App.config
 *.cache
 *.props
 *.editorconfig
+SM4D-2/SM4D-2.csproj.user
+*.v2
