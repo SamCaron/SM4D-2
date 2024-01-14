@@ -42,10 +42,10 @@ namespace SM4D_2
                 buttonSupprimer.Enabled = false;
 
             }
-            
+
         }
 
-    
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -105,7 +105,7 @@ namespace SM4D_2
 
             DialogResult confirmation = MessageBox.Show("Souhaitez-vous vraiment supprimer le Média sélectionné (incluant les présences et étiquettes)?", "Suppression", MessageBoxButtons.YesNo);
             ConnecteurSQLMedias connection = new ConnecteurSQLMedias();
-            Medias mediaASupprimer; 
+            Medias mediaASupprimer;
             switch (confirmation)
             {
                 case DialogResult.Yes:
@@ -118,8 +118,8 @@ namespace SM4D_2
                         mediaCourant.Collection.RetirerMedia(mediaASupprimer); // supprimer le fichier media
                         listeIdMedias.RemoveAll(I => I == mediaCourant.Id);
                         buttonPrecedent_Click(sender, e);
-                       // pictureBoxMiniature500.ImageLocation = mediaCourant.MiniatureVariablePath(600);
-                     //   pictureBoxMiniature500.SizeMode = PictureBoxSizeMode.StretchImage;
+                        // pictureBoxMiniature500.ImageLocation = mediaCourant.MiniatureVariablePath(600);
+                        //   pictureBoxMiniature500.SizeMode = PictureBoxSizeMode.StretchImage;
 
                     }
                     break;
@@ -137,6 +137,31 @@ namespace SM4D_2
             // on revient à l'écran de liste donc on bascule du details à la liste
             AccueilBorne accueil = (AccueilBorne)Application.OpenForms["AccueilBorne"];
             accueil.basculer("BLP");
+        }
+
+        private void chargerCommentaires()
+        {
+            rtbCommentaires.ResetText();
+            StringBuilder sb = new StringBuilder("\n");
+            List<Commentaire> lesCommentaires = new List<Commentaire>();
+            ConnecteurSQLCommentaire connection = new ConnecteurSQLCommentaire();
+            lesCommentaires = connection.VoirCommentaires(labelFichierOriginalValeur.Text);
+           
+            // Append = ajoute, AppendLine = ajoute puis echappe
+            foreach (Commentaire comm in lesCommentaires)
+            {
+                sb.AppendLine(comm.DateCreation.ToString());
+                sb.Append(comm.Prenom + " ");
+                sb.AppendLine(comm.Nom + ": ");
+                sb.AppendLine(comm.Contenu);
+                sb.Append("\n");
+            }
+            rtbCommentaires.Text = sb.ToString();
+        }
+        // Lorsque le nom de fichier change, charge les comm.
+        private void labelFichierOriginalValeur_TextChanged(object sender, EventArgs e)
+        {
+            chargerCommentaires();
         }
     }
 }
