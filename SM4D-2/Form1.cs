@@ -1,4 +1,5 @@
-﻿using SM4D2Librairie;
+﻿using SM4D2;
+using SM4D2Librairie;
 using SM4D2Librairie.AccesDonnees;
 using SM4D2Librairie.Modeles;
 using System;
@@ -93,8 +94,8 @@ namespace SM4D_2
 
         private void RafraichirFormulaire()
         {
-
-            this.lblUtilisateur.Text = formConn.prenom;
+            this.lblUtilisateur.Text = Connexion.Prenom + " "
+                + Connexion.Nom;
         }
         /*   private void linkLabelCacher_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
            {
@@ -157,8 +158,7 @@ namespace SM4D_2
                     break;
                 case "Login":
                     formConn.Show();
-
-
+                    
                     ConnecteurSQLCommun connecteur = new ConnecteurSQLCommun();
                     connecteur.ChargerParametres();
                     // labelInstructions.Show();

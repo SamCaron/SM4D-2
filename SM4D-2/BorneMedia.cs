@@ -1,4 +1,5 @@
-﻿using SM4D2Librairie.AccesDonnees;
+﻿using SM4D2;
+using SM4D2Librairie.AccesDonnees;
 using SM4D2Librairie.Modeles;
 using System;
 using System.Collections.Generic;
@@ -146,7 +147,7 @@ namespace SM4D_2
             List<Commentaire> lesCommentaires = new List<Commentaire>();
             ConnecteurSQLCommentaire connection = new ConnecteurSQLCommentaire();
             lesCommentaires = connection.VoirCommentaires(labelFichierOriginalValeur.Text);
-           
+
             // Append = ajoute, AppendLine = ajoute puis echappe
             foreach (Commentaire comm in lesCommentaires)
             {
@@ -162,6 +163,39 @@ namespace SM4D_2
         private void labelFichierOriginalValeur_TextChanged(object sender, EventArgs e)
         {
             chargerCommentaires();
+        }
+
+        private void commenterMedia(string prenom, string nom, string details, string nomDeFichier, string contenuComm)
+        {
+            if (rtbCommenter.Text != "")
+            {
+                ConnecteurSQLCommentaire connection = new ConnecteurSQLCommentaire();
+                connection.AjouterCommentaire(prenom, nom, details, contenuComm, nomDeFichier);
+            }
+        }
+
+        private void btnCommenter_Click(object sender, EventArgs e)
+        {
+            if (Connexion.EstConnecté)
+            {
+                commenterMedia(Connexion.Prenom,
+                    Connexion.Nom,
+                     Connexion.Details,
+                      labelFichierOriginalValeur.Text,
+                       rtbCommenter.Text);
+                chargerCommentaires();
+            }
+            else
+            {
+                MessageBox.Show("Action impossible, vous devez vous identifier");
+            }
+
+            rtbCommenter.Text = "";
+        }
+
+        private void labelNomMedia_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

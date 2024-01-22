@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             txtbPrenom = new TextBox();
             lblNom = new Label();
@@ -37,6 +38,9 @@
             lblDetails = new Label();
             btnEnregistrer = new Button();
             btnRecommencer = new Button();
+            errorProvider1 = new ErrorProvider(components);
+            toolTip1 = new ToolTip(components);
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -54,6 +58,7 @@
             txtbPrenom.Name = "txtbPrenom";
             txtbPrenom.Size = new Size(342, 27);
             txtbPrenom.TabIndex = 2;
+            txtbPrenom.Validating += txtbPrenom_Validating;
             // 
             // lblNom
             // 
@@ -70,6 +75,7 @@
             txtbNom.Name = "txtbNom";
             txtbNom.Size = new Size(342, 27);
             txtbNom.TabIndex = 4;
+            txtbNom.Validating += txtbNom_Validating;
             // 
             // lblPrenom
             // 
@@ -117,6 +123,14 @@
             btnRecommencer.UseVisualStyleBackColor = true;
             btnRecommencer.Click += btnRecommencer_Click;
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
+            // toolTip1
+            // 
+            toolTip1.ToolTipTitle = "Adresse courriel";
+            // 
             // FenetreConnexion
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -133,6 +147,8 @@
             Controls.Add(label1);
             Name = "FenetreConnexion";
             Text = "FenetreConnexion";
+            Load += FenetreConnexion_Load;
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -148,5 +164,7 @@
         private Label lblDetails;
         private Button btnEnregistrer;
         private Button btnRecommencer;
+        private ErrorProvider errorProvider1;
+        private ToolTip toolTip1;
     }
 }

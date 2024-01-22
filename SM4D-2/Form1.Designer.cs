@@ -239,7 +239,7 @@
             // 
             lblUtilisateur.AutoSize = true;
             lblUtilisateur.Enabled = false;
-            lblUtilisateur.Location = new Point(945, 16);
+            lblUtilisateur.Location = new Point(868, 16);
             lblUtilisateur.Name = "lblUtilisateur";
             lblUtilisateur.Size = new Size(76, 20);
             lblUtilisateur.TabIndex = 1;
@@ -249,7 +249,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1289, 1055);
+            ClientSize = new Size(1284, 999);
             Controls.Add(lblUtilisateur);
             Controls.Add(buttonConnexion);
             Controls.Add(panelCentreNiveau1);

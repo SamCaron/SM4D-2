@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SM4D2;
+using SM4D2Librairie;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +31,8 @@ namespace SM4D_2
             nom = txtbNom.Text;
             details = txtbDetails.Text;
 
+            Connexion.setConnexion(prenom, nom, details);
+
             this.estIdentifie = true;
         }
         private void Recommencer()
@@ -41,16 +45,49 @@ namespace SM4D_2
             txtbNom.Text = "";
             txtbDetails.Text = "";
 
+            Connexion.resetConnexion();
+
             this.estIdentifie = false;
         }
         private void btnEnregistrer_Click(object sender, EventArgs e)
         {
-            Enregistrer();
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                Enregistrer();
+                MessageBox.Show("Connecté en tant que: " + Connexion.Prenom + " " + Connexion.Nom
+                    + "\n Changer de menu pour que le changement s'applique.");
+                errorProvider1.Clear();
+            }
         }
 
         private void btnRecommencer_Click(object sender, EventArgs e)
         {
             Recommencer();
         }
+
+        private void FenetreConnexion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbPrenom_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtbPrenom.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtbPrenom, "Ce champ ne peut être vide.");
+            }
+        }
+
+        private void txtbNom_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtbNom.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtbNom, "Ce champ ne peut être vide.");
+            }
+        }
+
+
     }
 }

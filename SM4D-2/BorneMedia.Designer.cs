@@ -44,8 +44,10 @@
             buttonSupprimer = new Button();
             buttonModifier = new Button();
             buttonRetourListe = new Button();
-            btnCommenter = new Button();
             rtbCommentaires = new RichTextBox();
+            btnCommenter = new Button();
+            rtbCommenter = new RichTextBox();
+            lblComm = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMiniature500).BeginInit();
             SuspendLayout();
             // 
@@ -53,7 +55,6 @@
             // 
             pictureBoxMiniature500.BorderStyle = BorderStyle.FixedSingle;
             pictureBoxMiniature500.Location = new Point(12, -19);
-            pictureBoxMiniature500.Margin = new Padding(3, 4, 3, 4);
             pictureBoxMiniature500.Name = "pictureBoxMiniature500";
             pictureBoxMiniature500.Size = new Size(685, 799);
             pictureBoxMiniature500.TabIndex = 25;
@@ -67,7 +68,7 @@
             textBoxDescriptionMedia.Name = "textBoxDescriptionMedia";
             textBoxDescriptionMedia.PlaceholderText = "Description du média";
             textBoxDescriptionMedia.ReadOnly = true;
-            textBoxDescriptionMedia.Size = new Size(311, 179);
+            textBoxDescriptionMedia.Size = new Size(311, 130);
             textBoxDescriptionMedia.TabIndex = 26;
             // 
             // labelFichierOriginalValeur
@@ -103,6 +104,7 @@
             labelNomMedia.Size = new Size(105, 20);
             labelNomMedia.TabIndex = 30;
             labelNomMedia.Text = "<nom média>";
+            labelNomMedia.Click += labelNomMedia_Click;
             // 
             // labelA
             // 
@@ -186,10 +188,10 @@
             // buttonSupprimer
             // 
             buttonSupprimer.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonSupprimer.Location = new Point(861, 332);
+            buttonSupprimer.Location = new Point(854, 283);
             buttonSupprimer.Margin = new Padding(3, 4, 3, 4);
             buttonSupprimer.Name = "buttonSupprimer";
-            buttonSupprimer.Size = new Size(142, 51);
+            buttonSupprimer.Size = new Size(142, 50);
             buttonSupprimer.TabIndex = 62;
             buttonSupprimer.Text = "Supprimer";
             buttonSupprimer.UseVisualStyleBackColor = true;
@@ -198,7 +200,7 @@
             // buttonModifier
             // 
             buttonModifier.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonModifier.Location = new Point(703, 332);
+            buttonModifier.Location = new Point(703, 283);
             buttonModifier.Margin = new Padding(3, 4, 3, 4);
             buttonModifier.Name = "buttonModifier";
             buttonModifier.Size = new Size(145, 50);
@@ -219,21 +221,43 @@
             buttonRetourListe.UseVisualStyleBackColor = true;
             buttonRetourListe.Click += buttonRetourListe_Click;
             // 
-            // btnCommenter
-            // 
-            btnCommenter.Location = new Point(0, 0);
-            btnCommenter.Name = "btnCommenter";
-            btnCommenter.Size = new Size(75, 23);
-            btnCommenter.TabIndex = 0;
-            // 
             // rtbCommentaires
             // 
-            rtbCommentaires.Location = new Point(703, 424);
+            rtbCommentaires.Location = new Point(703, 358);
             rtbCommentaires.Name = "rtbCommentaires";
             rtbCommentaires.ReadOnly = true;
-            rtbCommentaires.Size = new Size(313, 391);
+            rtbCommentaires.Size = new Size(313, 312);
             rtbCommentaires.TabIndex = 1;
             rtbCommentaires.Text = "";
+            // 
+            // btnCommenter
+            // 
+            btnCommenter.Location = new Point(889, 782);
+            btnCommenter.Name = "btnCommenter";
+            btnCommenter.Size = new Size(107, 36);
+            btnCommenter.TabIndex = 0;
+            btnCommenter.Text = "Commenter";
+            btnCommenter.Click += btnCommenter_Click;
+            // 
+            // rtbCommenter
+            // 
+            rtbCommenter.AcceptsTab = true;
+            rtbCommenter.Location = new Point(703, 676);
+            rtbCommenter.Margin = new Padding(3, 3, 3, 36);
+            rtbCommenter.Name = "rtbCommenter";
+            rtbCommenter.Size = new Size(313, 102);
+            rtbCommenter.TabIndex = 64;
+            rtbCommenter.Text = "";
+            // 
+            // lblComm
+            // 
+            lblComm.AutoSize = true;
+            lblComm.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            lblComm.Location = new Point(712, 337);
+            lblComm.Name = "lblComm";
+            lblComm.Size = new Size(211, 41);
+            lblComm.TabIndex = 65;
+            lblComm.Text = "Commentaires";
             // 
             // BorneMedia
             // 
@@ -241,6 +265,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1026, 881);
             Controls.Add(btnCommenter);
+            Controls.Add(lblComm);
+            Controls.Add(rtbCommenter);
             Controls.Add(rtbCommentaires);
             Controls.Add(buttonRetourListe);
             Controls.Add(buttonSupprimer);
@@ -282,7 +308,9 @@
         private Button buttonSupprimer;
         private Button buttonModifier;
         private Button buttonRetourListe;
-        private Button btnCommenter;
         private RichTextBox rtbCommentaires;
+        private Button btnCommenter;
+        private RichTextBox rtbCommenter;
+        private Label lblComm;
     }
 }
